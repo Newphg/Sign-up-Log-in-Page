@@ -1,67 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login and Sign Up Page</title>
-    <style>
-        body {
-            background-color: #3498db;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-        }
-
-        form {
-            display: none;
-        }
-
-        button.toggle-form {
-            background-color: #2c3e50;
-            color: #fff;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<title>Github Sign In Page</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <h1>Login</h1>
-    <form id="loginForm" action="/login" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
-        <button type="submit">Login</button>
-    </form>
-
-    <h1>Sign Up</h1>
-    <button class="toggle-form" onclick="toggleForm()">Show Sign Up</button>
-    <form id="signupForm" action="/signup" method="post">
-        <label for="newUsername">New Username:</label>
-        <input type="text" id="newUsername" name="newUsername" required>
-
-        <label for="newPassword">New Password:</label>
-        <input type="password" id="newPassword" name="newPassword" required>
-
-        <button type="submit">Sign Up</button>
-    </form>
-
-    <script>
-        function toggleForm() {
-            var signupForm = document.getElementById("signupForm");
-            signupForm.style.display = (signupForm.style.display === "none" || signupForm.style.display === "") ? "block" : "none";
-        }
-    </script>
+	
+<div class="wrapper">
+	<div class="logo">
+		<img src="https://i.imgur.com/gr4XvFZ.png" alt="GitHub">
+	</div>
+	<div class="title">
+		<p>Sign in to GitHub</p>
+	</div>
+	<div class="form">
+		<div class="input_field">
+			<label>Username or email address</label>
+			<input type="text" class="input">
+		</div>
+		<div class="input_field">
+			<label>Password</label>
+			<input type="password" class="input">
+			<a href="#" class="forgot">Forgot password?</a>
+		</div>
+		<div class="btn">
+			<input type="submit" value="Sign in" class="sign_btn">
+		</div>
+	</div>
+	<div class="create_act">
+		<p>New to GitHub? <a href="#">Create an account.</a></p>
+	</div>
+	<div class="footer">
+		<ul>
+			<li><a href="#">Terms</a></li>
+			<li><a href="#">Privacy</a></li>
+			<li><a href="#">Security</a></li>
+			<li><a href="#">Contact GitHub</a></li>
+		</ul>
+	</div> 
+</div>	
 
 </body>
 </html>
